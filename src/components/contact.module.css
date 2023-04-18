@@ -1,0 +1,137 @@
+.contact {
+  margin: 50px 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.container {
+  height: max-content;
+  width: 1200px;
+  display: flex;
+  gap: 50px;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(39, 50, 124);
+  cursor: pointer;
+}
+.card svg {
+  font-size: 20px;
+  font-weight: bold;
+}
+.title {
+  font-weight: bold;
+}
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+label{
+  font-size: 20px;
+}
+.input {
+  height: 50px;
+  width: 100%;
+  font-size: 17px;
+  padding-left: 10px;
+  outline: 0;
+  border: 1px solid rgb(39, 50, 124);
+  border-radius: 5px;
+}
+.textarea {
+  height: 200px;
+  width: 100%;
+  font-size: 17px;
+  padding-left: 10px;
+  padding-top: 10px;
+  outline: 0;
+  border: 1px solid rgb(39, 50, 124);
+  border-radius: 5px;
+  resize: none;
+}
+.button {
+  width: max-content;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(73, 95, 239);
+  cursor: pointer;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.success {
+  padding: 8px 20px;
+  color: green;
+  border: 1px solid green;
+}
+.error{
+  padding: 8px 20px;
+  color: red;
+  border: 1px solid red;
+}
+@media (max-width: 1300px) {
+  .container {
+    width: 900px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 700px;
+    flex-direction: column;
+  }
+  .cardContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card {
+    width: 200px;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+  .cardContainer {
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    width: 350px;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card {
+    height: 150px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.nav {
+  height: 75px;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  z-index: 1;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.navButtons {
+  display: flex;
+}
+.navButtons a {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.navButtons a:hover {
+  color: rgb(73, 95, 239);
+  cursor: pointer;
+}
+.navButtons svg {
+  font-size: 30px;
+  display: none;
+}
+.navButtons svg:hover {
+  color: rgb(73, 95, 239);
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  .navButtons a {
+    display: none;
+  }
+  .navButtons svg {
+    display: block;
+  }
+}
+@media (max-width: 550px) {
+  .nav{
+    width: 100vw;
+  }
+}

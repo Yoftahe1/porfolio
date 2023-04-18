@@ -1,0 +1,122 @@
+.about {
+  margin: 50px 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.container {
+  height: max-content;
+  width: 1200px;
+  display: flex;
+  gap: 50px;
+}
+.image {
+  height: 500px;
+  min-width: 500px;
+  max-width: 500px;
+  border-radius: 30px;
+  background-color: aquamarine;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(39, 50, 124);
+  text-align: center;
+}
+.card svg {
+  font-size: 20px;
+  font-weight: bold;
+}
+.title {
+  font-weight: bold;
+}
+.paragraph {
+  color: rgb(59, 59, 59);
+  font-size: 15px;
+  font-weight: bold;
+}
+.paragraph b {
+  color: black;
+}
+.button {
+  width: max-content;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 0;
+  outline: 0;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(73, 95, 239);
+  cursor: pointer;
+  text-decoration: none;
+}
+@media (max-width: 1300px) {
+  .container {
+    width: 900px;
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .image {
+    height: 400px;
+    min-width: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 700px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 500px;
+  }
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    width: 350px;
+  }
+  .image {
+    height: 350px;
+    min-width: 100%;
+  }
+
+  .cardContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card {
+    height: 150px;
+    width: 100%;
+  }
+}
