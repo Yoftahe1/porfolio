@@ -29,7 +29,7 @@
   gap: 5px;
   color: white;
   text-decoration: none;
-  background-color: rgb(39, 50, 124);
+  background-color: #5b70f3;
   cursor: pointer;
 }
 .card svg {
@@ -47,6 +47,7 @@
 }
 label{
   font-size: 20px;
+  font-weight: bold;
 }
 .input {
   height: 50px;
@@ -54,7 +55,7 @@ label{
   font-size: 17px;
   padding-left: 10px;
   outline: 0;
-  border: 1px solid rgb(39, 50, 124);
+  border: 1px solid #5b70f3;
   border-radius: 5px;
 }
 .textarea {
@@ -64,20 +65,24 @@ label{
   padding-left: 10px;
   padding-top: 10px;
   outline: 0;
-  border: 1px solid rgb(39, 50, 124);
+  border: 1px solid #5b70f3;
   border-radius: 5px;
   resize: none;
 }
 .button {
   width: max-content;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-weight: bold;
   border: 0;
   outline: 0;
   color: white;
   border-radius: 5px;
-  background-color: rgb(73, 95, 239);
+  background-color: #5b70f3;
   cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.button:hover{
+  padding: 15px 35px;
 }
 .wrap {
   display: flex;

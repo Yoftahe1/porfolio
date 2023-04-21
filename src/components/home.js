@@ -1,16 +1,22 @@
 import React from "react";
-import image from "../assets/image.png";
+import image from "../assets/heroImage.png";
+import { Link } from "react-scroll";
 import styles from "./home.module.css";
 const Home = () => {
   return (
-    <div className={styles.home} id="home">
+    <div className={styles.home} name="home">
       <div className={styles.container}>
-        <div >
-          <p className={styles.introduction}>I'M YOFTAHE FULLSTACK DEVELOPER</p>
+        <div>
+          <p className={styles.introduction}>
+            HEY 👋
+            <br /> I'M YOFTAHE MERKEBU FULLSTACK DEVELOPER
+          </p>
           <h1 className={styles.description}>
             I DESIGN WEBSITE AND APPLICATION FOR CLIENTS
           </h1>
-          <a className={styles.button} href="#works">EXPLORE WORKS</a>
+          <Link className={styles.button} to="works" smooth duration={500}>
+            EXPLORE WORKS
+          </Link>
         </div>
         <img className={styles.image} src={image} alt="profile" />
       </div>

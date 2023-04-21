@@ -1,39 +1,39 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../fire";
+// import { GoArrowDown } from "react-icons/go";
 import { AiOutlineEye } from "react-icons/ai";
 import { SiGithub } from "react-icons/si";
 import styles from "./works.module.css";
 const Works = () => {
   const [websites, setWebsites] = useState([]);
-  const getCollection = useCallback(async () => {
-    const querySnapshot = await getDocs(collection(db, "websites"));
 
-    querySnapshot.forEach((doc) => {
-      // console.log(doc.data());
-      setWebsites((prev) => [...prev, doc.data()]);
-    });
-  }, []);
   useEffect(() => {
-    console.log(1);
-    // async function getCollection() {
-    //   const querySnapshot = await getDocs(collection(db, "websites"));
-
-    //   querySnapshot.forEach((doc) => {
-    //     setWebsites((prev) => [...prev, doc.data()]);
-    //   });
-    // }
+    async function getCollection() {
+      const querySnapshot = await getDocs(collection(db, "websites"));
+      let newWebsites = [];
+      querySnapshot.forEach((doc) => {
+        newWebsites.push(doc.data());
+      });
+      setWebsites(newWebsites);
+    }
     getCollection();
-  }, [getCollection]);
-  console.log(websites);
+  }, []);
   return (
-    <div className={styles.works} id="works">
+    <div className={styles.works} name="works">
       <h2 className={styles.title}>My Works</h2>
       <div className={styles.container}>
         <div className={styles.grid}>
           {websites.map((element, index) => {
             return (
               <div className={styles.work} key={index}>
+                {/* <div className={styles.topPane}>
+                  <GoArrowDown />
+                  <p className={styles.header}>{element.title}</p>
+                  <div className={styles.description}>
+                    {element.description}
+                  </div>
+                </div> */}
                 <img
                   className={styles.image}
                   src={element.image}

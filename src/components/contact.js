@@ -32,7 +32,7 @@ const Contact = () => {
     form.current.reset();
   };
   return (
-    <div className={styles.contact} id="contact">
+    <div className={styles.contact} name="contact">
       <h2>Contact-Me</h2>
       <div className={styles.container}>
         <div className={styles.cardContainer}>

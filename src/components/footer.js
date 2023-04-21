@@ -4,7 +4,7 @@ const Footer = () => {
     const date=new Date()
   return (
     <div className={styles.footer}>
-      @ all-rights reserved to YOFTAHE {date.getFullYear()}
+      @ All-rights reserved to YOFTAHE {date.getFullYear()}
     </div>
   );
 };

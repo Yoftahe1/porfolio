@@ -2,13 +2,15 @@ import React from "react";
 import { RiMedalFill } from "react-icons/ri";
 import { MdFavoriteBorder } from "react-icons/md";
 import { IoPersonOutline } from "react-icons/io5";
+import { Link } from "react-scroll";
+import image from "../assets/about.webp";
 import styles from "./about.module.css";
 const About = () => {
   return (
-    <div className={styles.about} id="about">
+    <div className={styles.about} name="about">
       <h2>About-Me</h2>
       <div className={styles.container}>
-        <img className={styles.image} alt="profile"/>
+        <img src={image} className={styles.image} alt="profile" />
         <div className={styles.description}>
           <div className={styles.cardContainer}>
             <div className={styles.card}>
@@ -22,8 +24,12 @@ const About = () => {
             </div>
             <div className={styles.card}>
               <MdFavoriteBorder />
-              <p className={styles.title}>passion</p>
-              <p>I like to code</p>
+              <p className={styles.title}>Passion</p>
+              <p>
+                Codding
+                <br />
+                Learning
+              </p>
             </div>
             <div className={styles.card}>
               <IoPersonOutline />
@@ -42,7 +48,9 @@ const About = () => {
             to code and read. I am passionate about my work and always try to
             learn new things to improve myself day by day.
           </p>
-          <a className={styles.button} href="#contact">Let's Talk</a>
+          <Link className={styles.button} to="contact" smooth duration={500}>
+            Let's Talk
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-scroll";
 import styles from "./mobileNav.module.css";
 const MobileNav = (props) => {
   return createPortal(
@@ -10,41 +11,51 @@ const MobileNav = (props) => {
           <div className={styles.title}>YOFTAHE</div>
           <AiOutlineClose onClick={() => props.setShowNav(false)} />
         </div>
-        <a
+        <Link
           className={styles.link}
-          href="#home"
           onClick={() => props.setShowNav(false)}
+          to="home"
+          smooth
+          duration={500}
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
           className={styles.link}
-          href="#skills"
           onClick={() => props.setShowNav(false)}
+          to="skills"
+          smooth
+          duration={500}
         >
           Skills
-        </a>
-        <a
+        </Link>
+        <Link
           className={styles.link}
-          href="#about"
           onClick={() => props.setShowNav(false)}
+          to="about"
+          smooth
+          duration={500}
         >
           About-Me
-        </a>
-        <a
+        </Link>
+        <Link
           className={styles.link}
-          href="#works"
           onClick={() => props.setShowNav(false)}
+          to="works"
+          smooth
+          duration={500}
         >
           Projects
-        </a>
-        <a
+        </Link>
+        <Link
           className={styles.link}
-          href="#contact"
           onClick={() => props.setShowNav(false)}
+          to="contact"
+          smooth
+          duration={500}
         >
           Contact-Me
-        </a>
+        </Link>
       </div>
     </>,
     document.getElementById("portal")

@@ -27,13 +27,18 @@
 .button {
   width: max-content;
   color: white;
-  background-color: rgb(73, 95, 239);
+  font-weight: bold;
+  background-color: #5b70f3;
   padding: 20px 30px;
   border-radius: 40px;
   border: 0;
   outline: 0;
   cursor: pointer;
   text-decoration: none;
+  transition: .3s ease-in-out;
+}
+.button:hover{
+  padding: 20px 35px;
 }
 .image {
   height: 450px;

@@ -16,6 +16,12 @@
 .navButtons {
   display: flex;
 }
+.hover {
+  height: 2px;
+  width: 0%;
+  transition: .4s ease-in-out;
+  background-color: rgb(73, 95, 239);
+}
 .navButtons a {
   padding: 10px 20px;
   font-size: 15px;
@@ -27,6 +33,10 @@
   color: rgb(73, 95, 239);
   cursor: pointer;
 }
+.navButtons a:hover .hover{
+  width: 100%;
+}
+
 .navButtons svg {
   font-size: 30px;
   display: none;
@@ -44,7 +54,7 @@
   }
 }
 @media (max-width: 550px) {
-  .nav{
+  .nav {
     width: 100vw;
   }
 }

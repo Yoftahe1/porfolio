@@ -1,10 +1,13 @@
 .works {
+  min-height: 100vh;
   margin: 50px 0;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
+  background-color: rgba(199, 214, 245, 0.377);
 }
 .container {
   display: flex;
@@ -20,9 +23,59 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   overflow: hidden;
 }
+.topPane {
+  height: 200px;
+  width: 450px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  position: absolute;
+  clip-path: circle(10% at 50% 0);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+.topPane svg {
+  color: #5b70f3;
+}
+.header {
+  display: none;
+  font-weight: bold;
+}
+.description {
+  display: none;
+  overflow-y: scroll;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.description {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.description::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.topPane:hover {
+  clip-path: circle(100% at 50% 10%);
+}
+
+.topPane:hover svg {
+  display: none;
+}
+.topPane:hover .header {
+  display: block;
+}
+.topPane:hover .description {
+  display: block;
+}
 .image {
   min-height: 455px;
-  width: 450px;
+  min-width: 450px;
+  max-width: 450px;
   background-size: contain;
   filter: blur(1);
   background-color: rgba(49, 76, 252, 0.2);
@@ -36,7 +89,7 @@
   justify-content: space-between;
   position: absolute;
   color: white;
-  background-color: rgb(39, 50, 124);
+  background-color: #5b70f3;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   transform: translateY(-70px);
 }
@@ -59,7 +112,7 @@
   border-radius: 5px;
 }
 .button:hover {
-  color: rgb(39, 50, 124);
+  color: #5b70f3;
   background-color: white;
   cursor: pointer;
 }
@@ -76,8 +129,13 @@
     width: 900px;
   }
   .work,
-  .bottomPane {
+  .bottomPane,.topPane {
     width: 400px;
+  }
+  .image {
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 405px;
   }
 }
 @media (max-width: 1000px) {
@@ -88,8 +146,13 @@
     grid-template-columns: 1fr;
   }
   .work,
-  .bottomPane {
+  .bottomPane,.topPane {
     width: 450px;
+  }
+  .image {
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 455px;
   }
 }
 @media (max-width: 800px) {
@@ -105,7 +168,12 @@
     width: 100%;
   }
   .work,
-  .bottomPane {
+  .bottomPane,.topPane {
     width: 350px;
+  }
+  .image {
+    max-width: 350px;
+    min-width: 350px;
+    min-height: 355px;
   }
 }
