@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
-  background-color: rgba(199, 214, 245, 0.377);
+  background-color: rgba(0, 129, 201,.1);
 }
 .container {
   width: 1500px;
@@ -129,5 +129,12 @@
   .skill div {
     height: 70px;
     width: 70px;
+  }
+}
+@media (max-width:390px) {
+  .container{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+
   }
 }

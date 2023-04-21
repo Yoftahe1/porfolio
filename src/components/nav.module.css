@@ -20,7 +20,7 @@
   height: 2px;
   width: 0%;
   transition: .4s ease-in-out;
-  background-color: rgb(73, 95, 239);
+  background-color: rgb(0, 129, 201);
 }
 .navButtons a {
   padding: 10px 20px;
@@ -30,7 +30,7 @@
   color: black;
 }
 .navButtons a:hover {
-  color: rgb(73, 95, 239);
+  color: rgb(0, 129, 201);
   cursor: pointer;
 }
 .navButtons a:hover .hover{
@@ -42,7 +42,7 @@
   display: none;
 }
 .navButtons svg:hover {
-  color: rgb(73, 95, 239);
+  color: rgb(0, 129, 201);
   cursor: pointer;
 }
 @media (max-width: 700px) {

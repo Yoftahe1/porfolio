@@ -29,7 +29,7 @@
   gap: 5px;
   color: white;
   text-decoration: none;
-  background-color: #5b70f3;
+  background-color: rgb(0, 129, 201);
   cursor: pointer;
 }
 .card svg {
@@ -55,7 +55,7 @@ label{
   font-size: 17px;
   padding-left: 10px;
   outline: 0;
-  border: 1px solid #5b70f3;
+  border: 1px solid rgb(0, 129, 201);
   border-radius: 5px;
 }
 .textarea {
@@ -65,7 +65,7 @@ label{
   padding-left: 10px;
   padding-top: 10px;
   outline: 0;
-  border: 1px solid #5b70f3;
+  border: 1px solid rgb(0, 129, 201);
   border-radius: 5px;
   resize: none;
 }
@@ -77,7 +77,7 @@ label{
   outline: 0;
   color: white;
   border-radius: 5px;
-  background-color: #5b70f3;
+  background-color: rgb(0, 129, 201);
   cursor: pointer;
   transition: .3s ease-in-out;
 }
@@ -137,6 +137,11 @@ label{
   }
   .card {
     height: 150px;
+    width: 100%;
+  }
+}
+@media (max-width:390px) {
+  .container{
     width: 100%;
   }
 }

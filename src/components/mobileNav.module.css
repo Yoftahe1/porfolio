@@ -31,7 +31,7 @@
   font-size: 30px;
 }
 .header svg:hover {
-    color: rgb(73, 95, 239);
+    color: rgb(0, 129, 201);
   }
 .link {
   color: black;
@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 .link:hover{
-    color: rgb(73, 95, 239);
+    color: rgb(0, 129, 201);
 }
 @media (max-width: 700px) {
   .mobileNav {

@@ -3,7 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-weight: bold;
     color: white;
-    background-color: #5b70f3;
+    background-color: rgb(0, 129, 201);
 }
