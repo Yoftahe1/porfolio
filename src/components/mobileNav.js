@@ -17,8 +17,11 @@ const MobileNav = (props) => {
           to="home"
           smooth
           duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-150}
         >
-          Home
+          Home<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -26,8 +29,11 @@ const MobileNav = (props) => {
           to="skills"
           smooth
           duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-150}
         >
-          Skills
+          Skills<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -35,8 +41,11 @@ const MobileNav = (props) => {
           to="about"
           smooth
           duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-150}
         >
-          About-Me
+          About-Me<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -44,8 +53,11 @@ const MobileNav = (props) => {
           to="works"
           smooth
           duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-150}
         >
-          Projects
+          Projects<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -53,8 +65,11 @@ const MobileNav = (props) => {
           to="contact"
           smooth
           duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-150}
         >
-          Contact-Me
+          Contact-Me<div className={styles.hover}></div>
         </Link>
       </div>
     </>,

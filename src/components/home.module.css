@@ -35,10 +35,13 @@
   outline: 0;
   cursor: pointer;
   text-decoration: none;
-  transition: .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.button:hover{
-  padding: 20px 35px;
+.button:hover svg {
+  transition: .3s ease-in-out;
+  transform: rotate(90deg);
 }
 .image {
   height: 450px;

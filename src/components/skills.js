@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import js from "../assets/javascript.png";
@@ -10,12 +10,32 @@ import git from "../assets/git.png";
 import firebase from "../assets/firebase.png";
 import postgres from "../assets/postgres.png";
 import mongodb from "../assets/mongodb.png";
-import cpp from '../assets/cpp.png'
-import java from '../assets/java.png'
-import flutter from '../assets/flutter.png'
-import ionic from '../assets/ionic.png'
+import cpp from "../assets/cpp.png";
+import java from "../assets/java.png";
+import flutter from "../assets/flutter.png";
+import ionic from "../assets/ionic.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./skills.module.css";
+gsap.registerPlugin(ScrollTrigger);
+
 const Skills = () => {
+  const containerRef = useRef();
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".skills_container__a6txg",
+            toggleActions: "play reverse play reverse",
+            start: "top 70%",
+            end: "bottom 30%",
+          },
+        })
+        .from(".skills_skill__HuJ6a", { y: 10, opacity: 0 });
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
   const skills = [
     { image: html, className: styles.html, title: "HTML" },
     { image: css, className: styles.css, title: "CSS" },
@@ -34,13 +54,13 @@ const Skills = () => {
     { image: ionic, className: styles.ionic, title: "IONIC" },
   ];
   return (
-    <div className={styles.skills} name="skills">
-      <h2>My Skills</h2>
+    <div className={styles.skills} ref={containerRef} name="skills">
+      <h2 className="h2">My Skills</h2>
       <div className={styles.container}>
         {skills.map((element, index) => {
           return (
             <div className={styles.skill} key={index}>
-              <div className={element.className} >
+              <div className={element.className}>
                 <img
                   className={styles.image}
                   src={element.image}
