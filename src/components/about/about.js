@@ -4,7 +4,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { IoPersonOutline } from "react-icons/io5";
 import {IoIosArrowForward}from 'react-icons/io'
 import { Link } from "react-scroll";
-import image from "../assets/about.webp";
+import image from "../../assets/about.webp";
 import styles from "./about.module.css";
 const About = () => {
   return (
@@ -49,7 +49,7 @@ const About = () => {
             to code and read. I am passionate about my work and always try to
             learn new things to improve myself day by day.
           </p>
-          <Link className={styles.button} to="contact" smooth duration={500}>
+          <Link className={styles.button} to="contact" smooth duration={500} offset={-75}>
             Let's Talk <IoIosArrowForward/>
           </Link>
         </div>

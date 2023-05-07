@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/heroImage.png";
+import image from "../../assets/heroImage.png";
 import { Link } from "react-scroll";
 import {IoIosArrowForward}from 'react-icons/io'
 import styles from "./home.module.css";
@@ -13,9 +13,9 @@ const Home = () => {
             <br /> I'M YOFTAHE MERKEBU FULLSTACK DEVELOPER
           </p>
           <h1 className={styles.description}>
-            I DESIGN WEBSITE AND APPLICATION FOR CLIENTS
+            I DEVELOP WEBSITE AND APPLICATION FOR CLIENTS
           </h1>
-          <Link className={styles.button} to="works" smooth duration={500}>
+          <Link className={styles.button} to="works" smooth duration={500} offset={-75}>
             EXPLORE WORKS <IoIosArrowForward/>
           </Link>
         </div>

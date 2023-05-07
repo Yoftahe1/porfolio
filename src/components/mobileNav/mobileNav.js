@@ -19,9 +19,22 @@ const MobileNav = (props) => {
           duration={500}
           spy={true}
           activeClass={styles.active}
-          offset={-150}
+          offset={-75}
         >
           Home<div className={styles.hover}></div>
+        </Link>
+        
+        <Link
+          className={styles.link}
+          onClick={() => props.setShowNav(false)}
+          to="about"
+          smooth
+          duration={500}
+          spy={true}
+          activeClass={styles.active}
+          offset={-75}
+        >
+          About-Me<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -31,21 +44,9 @@ const MobileNav = (props) => {
           duration={500}
           spy={true}
           activeClass={styles.active}
-          offset={-150}
+          offset={-75}
         >
           Skills<div className={styles.hover}></div>
-        </Link>
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="about"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-150}
-        >
-          About-Me<div className={styles.hover}></div>
         </Link>
         <Link
           className={styles.link}
@@ -55,7 +56,7 @@ const MobileNav = (props) => {
           duration={500}
           spy={true}
           activeClass={styles.active}
-          offset={-150}
+          offset={-75}
         >
           Projects<div className={styles.hover}></div>
         </Link>
@@ -67,7 +68,7 @@ const MobileNav = (props) => {
           duration={500}
           spy={true}
           activeClass={styles.active}
-          offset={-150}
+          offset={-75}
         >
           Contact-Me<div className={styles.hover}></div>
         </Link>

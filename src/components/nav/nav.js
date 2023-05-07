@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import MobileNav from "./mobileNav";
+import MobileNav from "../mobileNav/mobileNav";
 import { Link } from "react-scroll";
 import styles from "./nav.module.css";
 const Nav = () => {
@@ -11,19 +11,20 @@ const Nav = () => {
       <div className={styles.nav}>
         <div className={styles.title}>YOFTAHE</div>
         <div className={styles.navButtons}>
-          <Link to="home" smooth duration={500} spy={true} activeClass={styles.active} offset={-150}>
+          <Link to="home" smooth duration={500} spy={true} activeClass={styles.active} offset={-75}>
             Home<div className={styles.hover}></div>
           </Link>
-          <Link to="skills" smooth duration={500} spy={true} activeClass={styles.active} offset={-150}>
-            Skills<div className={styles.hover}></div>
-          </Link>
-          <Link to="about" smooth duration={500} spy={true} activeClass={styles.active} offset={-150}>
+          <Link to="about" smooth duration={500} spy={true} activeClass={styles.active} offset={-75}>
             About-Me<div className={styles.hover}></div>
           </Link>
-          <Link to="works" smooth duration={500} spy={true} activeClass={styles.active} offset={-150}>
+          <Link to="skills" smooth duration={500} spy={true} activeClass={styles.active} offset={-75}>
+            Skills<div className={styles.hover}></div>
+          </Link>
+          
+          <Link to="works" smooth duration={500} spy={true} activeClass={styles.active} offset={-75}>
             Projects<div className={styles.hover}></div>
           </Link>
-          <Link to="contact" smooth duration={500} spy={true} activeClass={styles.active} offset={-150}>
+          <Link to="contact" smooth duration={500} spy={true} activeClass={styles.active} offset={-75}>
             Contact-Me<div className={styles.hover}></div>
           </Link>
           <GiHamburgerMenu onClick={() => setShowNav(true)} />

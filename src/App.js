@@ -1,21 +1,21 @@
 import "./App.css";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
-import Home from "./components/home";
-import Nav from "./components/nav";
-import Skills from "./components/skills";
-import Works from "./components/works";
+import About from "./components/about/about";
+import Contact from "./components/contact/contact";
+import Footer from "./components/footer/footer";
+import Home from "./components/home/home";
+import Nav from "./components/nav/nav";
+import Skills from "./components/skills/skills";
+import Works from "./components/works/works";
 function App() {
   return (
     <div className="App">
       <Nav />
       <Home />
-      <Skills />
       <About />
+      <Skills />
       <Works />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
