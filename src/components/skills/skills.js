@@ -1,9 +1,13 @@
-import React, { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./skills.module.css";
-import skills from "../../constants/skills";
+
 import Skill from "../skill/skill";
+import skills from "../../constants/skills";
+
+import styles from "./skills.module.css";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
@@ -15,17 +19,19 @@ const Skills = () => {
           scrollTrigger: {
             trigger: ".skills_container__lSck3",
             toggleActions: "play reverse play reverse",
-            start: "top 70%",
-            end: "bottom 30%",
+            start: "top 90%",
+            end: "bottom 20%",
           },
         })
-        .from(".skills_skill__k8Ic7", { y: 10, opacity: 0 });
+        .from(".skills_container__lSck3", { y: 10, opacity: 0 });
     }, containerRef);
     return () => ctx.revert();
   }, []);
   return (
-    <div className={styles.skills} ref={containerRef} name="skills">
-      <h2 className="h2">My Skills</h2>
+    <div className={styles.skills} ref={containerRef} name="Skills">
+      <h2 className={styles.title}>
+        Explore <span> Expertise</span> & <span>Skill</span> Set
+      </h2>
       <div className={styles.container}>
         {skills.map((element, index) => {
           return (

@@ -1,15 +1,25 @@
 .contact {
   min-height: 100vh;
-  padding: 20px;
+  padding: 75px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
+.title {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.title span {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: rgb(0, 129, 201);
+}
 .container {
   height: max-content;
-  width: 1200px;
+  width: 1100px;
   display: flex;
   gap: 50px;
 }
@@ -31,12 +41,16 @@
   text-decoration: none;
   background-color: rgb(0, 129, 201);
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .card svg {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
-.title {
+.type {
+  font-size: 20px;
   font-weight: bold;
 }
 .inputContainer {
@@ -45,28 +59,41 @@
   flex-direction: column;
   gap: 20px;
 }
-label{
-  font-size: 20px;
+.description {
+  font-size: 16px;
   font-weight: bold;
+}
+.description span {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: rgb(0, 129, 201);
 }
 .input {
   height: 50px;
   width: 100%;
-  font-size: 17px;
-  padding-left: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 20px;
+  border: 0;
   outline: 0;
+  color: gray;
   border: 1px solid rgb(0, 129, 201);
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: rgba(53, 142, 190, 0.219);
 }
 .textarea {
   height: 200px;
   width: 100%;
-  font-size: 17px;
-  padding-left: 10px;
-  padding-top: 10px;
+  font-weight: 550;
+  font-size: 19px;
+  padding: 15px;
+  color: gray;
   outline: 0;
   border: 1px solid rgb(0, 129, 201);
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: rgba(53, 142, 190, 0.219);
   resize: none;
 }
 .button {
@@ -81,7 +108,7 @@ label{
   cursor: pointer;
   background-color: transparent;
 }
-.button:hover{
+.button:hover {
   color: white;
   background-color: rgb(0, 129, 201);
 }
@@ -95,7 +122,7 @@ label{
   color: green;
   border: 1px solid green;
 }
-.error{
+.error {
   padding: 8px 20px;
   color: red;
   border: 1px solid red;
@@ -141,8 +168,8 @@ label{
     width: 100%;
   }
 }
-@media (max-width:390px) {
-  .container{
+@media (max-width: 390px) {
+  .container {
     width: 100%;
   }
 }

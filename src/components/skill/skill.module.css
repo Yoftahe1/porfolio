@@ -4,8 +4,9 @@
   align-items: center;
   gap: 10px;
 }
-.skill p {
+.title {
   font-weight: bold;
+  text-transform: uppercase;
 }
 .imgContainer {
   height: 100px;
@@ -14,6 +15,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.2s ease-in-out;
 }
 .imgContainer:hover {
   transform: scale(1.05);
@@ -27,17 +30,29 @@
 .postgres,
 .cpp,
 .java,
+.solid,
 .flutter {
   background-color: rgba(0, 60, 255, 0.2);
 }
 .js {
-  background-color: rgba(217, 255, 0, 0.411);
+  background-color: rgba(217, 255, 0, 0.3);
+}
+.tanstack {
+  background-color: rgba(250, 15, 35, 0.4);
+}
+.jwt {
+  background-color: rgba(0, 0, 0, 0.568);
+}
+.bootstrap {
+  background-color: rgba(113, 43, 226, 0.5);
 }
 .react,
+.native,
 .ionic {
-  background-color: rgba(123, 236, 236, 0.288);
+  background-color: rgba(123, 236, 236, 0.2);
 }
-.api {
+.api,
+.framer {
   background-color: rgba(128, 128, 128, 0.308);
 }
 .node,
@@ -53,11 +68,13 @@
 .redux {
   background-color: rgba(88, 5, 126, 0.226);
 }
+.jest {
+  background-color: rgba(109, 11, 11, 0.308);
+}
 .image {
   height: 45px;
   width: 45px;
 }
-
 @media (max-width: 550px) {
   .skill div {
     height: 70px;

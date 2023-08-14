@@ -1,8 +1,11 @@
-import React from "react";
 import { createPortal } from "react-dom";
-import { AiOutlineClose } from "react-icons/ai";
+
 import { Link } from "react-scroll";
+import { AiOutlineClose } from "react-icons/ai";
+
+import links from "../../constants/navigation";
 import styles from "./mobileNav.module.css";
+
 const MobileNav = (props) => {
   return createPortal(
     <>
@@ -11,67 +14,24 @@ const MobileNav = (props) => {
           <div className={styles.title}>YOFTAHE</div>
           <AiOutlineClose onClick={() => props.setShowNav(false)} />
         </div>
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="home"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-75}
-        >
-          Home<div className={styles.hover}></div>
-        </Link>
-        
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="about"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-75}
-        >
-          About-Me<div className={styles.hover}></div>
-        </Link>
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="skills"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-75}
-        >
-          Skills<div className={styles.hover}></div>
-        </Link>
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="works"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-75}
-        >
-          Projects<div className={styles.hover}></div>
-        </Link>
-        <Link
-          className={styles.link}
-          onClick={() => props.setShowNav(false)}
-          to="contact"
-          smooth
-          duration={500}
-          spy={true}
-          activeClass={styles.active}
-          offset={-75}
-        >
-          Contact-Me<div className={styles.hover}></div>
-        </Link>
+        {links.map((element, index) => {
+          return (
+            <Link
+              key={index}
+              className={styles.link}
+              onClick={() => props.setShowNav(false)}
+              to={element}
+              smooth
+              duration={500}
+              spy={true}
+              activeClass={styles.active}
+              offset={-75}
+            >
+              {element}
+              <div className={styles.hover}></div>
+            </Link>
+          );
+        })}
       </div>
     </>,
     document.getElementById("portal")

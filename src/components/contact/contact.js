@@ -1,9 +1,12 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
+
 import emailjs from "@emailjs/browser";
+import { BsTelephone } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 import { TbBrandTelegram } from "react-icons/tb";
-import { BsTelephone } from "react-icons/bs";
+
 import styles from "./contact.module.css";
+
 const Contact = () => {
   const [isSent, setIsSent] = useState(null);
   const form = useRef();
@@ -32,18 +35,20 @@ const Contact = () => {
     form.current.reset();
   };
   return (
-    <div className={styles.contact} name="contact">
-      <h2>Contact-Me</h2>
+    <div className={styles.contact} name="Contact-Me">
+      <h2 className={styles.title}>
+        Let's <span>Talk</span> About Everything!
+      </h2>
       <div className={styles.container}>
         <div className={styles.cardContainer}>
           <a
-            href="mailto:yoftahemerkebu@gmail.com"
+            href="mailto:yoftahemerkebu2@gmail.com"
             target="_blank"
             rel="noreferrer"
             className={styles.card}
           >
             <HiOutlineMail />
-            <p className={styles.title}>Email</p>
+            <p className={styles.type}>Email</p>
             <p>Go to Email</p>
           </a>
           <a
@@ -53,7 +58,7 @@ const Contact = () => {
             className={styles.card}
           >
             <TbBrandTelegram />
-            <p className={styles.title}>Telegram</p>
+            <p className={styles.type}>Telegram</p>
             <p>Go to Telegram</p>
           </a>
           <div
@@ -63,12 +68,15 @@ const Contact = () => {
             className={styles.card}
           >
             <BsTelephone />
-            <p className={styles.title}>Phone</p>
-            <p >Click to copy</p>
+            <p className={styles.type}>Phone</p>
+            <p>Click to copy</p>
           </div>
         </div>
         <form className={styles.inputContainer} ref={form} onSubmit={sendEmail}>
-          <label>Enter Your Information</label>
+          <p className={styles.description}>
+            Drop a message and let's chat how to bring your <span>vision</span>{" "}
+            to life.
+          </p>
           <input
             className={styles.input}
             placeholder="Enter Your Full Name"
@@ -76,7 +84,7 @@ const Contact = () => {
           />
           <input
             className={styles.input}
-            placeholder="Enter Your Email "
+            placeholder="Enter Your Email Address"
             name="email"
           />
           <textarea

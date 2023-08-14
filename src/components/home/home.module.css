@@ -1,9 +1,10 @@
 .home {
-  min-height: 100vh;
-  padding: 20px 20px;
+  min-height: calc(100vh - 75px);
+  padding: 75px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .container {
   width: 1200px;
@@ -18,6 +19,10 @@
 }
 .introduction {
   font-weight: bold;
+}
+.introduction span{
+  font-size: 18px;
+  color: rgb(0, 129, 201);
 }
 .description {
   font-size: 50px;
@@ -39,36 +44,36 @@
   gap: 15px;
 }
 .button:hover svg {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   transform: rotate(90deg);
 }
 .image {
   height: 450px;
 }
-@media (max-width:800px) {
-  .container{
+@media (max-width: 800px) {
+  .container {
     flex-direction: column-reverse;
   }
-  .introduction{
+  .introduction {
     text-align: center;
   }
-  .description{
+  .description {
     text-align: center;
     font-size: 30px;
   }
-  .container div{
+  .container div {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-@media (max-width:1300px) {
-  .image{
+@media (max-width: 1300px) {
+  .image {
     width: 400px;
   }
 }
-@media (max-width:550px) {
-  .container{
+@media (max-width: 550px) {
+  .container {
     width: 350px;
   }
   .image {
@@ -76,8 +81,9 @@
     width: 350px;
   }
 }
-@media (max-width:390px) {
-  .container,.image{
+@media (max-width: 390px) {
+  .container,
+  .image {
     width: 100%;
     height: auto;
   }
