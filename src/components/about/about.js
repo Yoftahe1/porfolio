@@ -44,7 +44,7 @@ const About = () => {
           </p>
           <Link
             className={styles.button}
-            to="contact"
+            to="Contact-Me"
             smooth
             duration={500}
             offset={-75}

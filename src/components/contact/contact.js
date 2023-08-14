@@ -79,17 +79,17 @@ const Contact = () => {
           </p>
           <input
             className={styles.input}
-            placeholder="Enter Your Full Name"
+            placeholder="Enter Full Name"
             name="name"
           />
           <input
             className={styles.input}
-            placeholder="Enter Your Email Address"
+            placeholder="Enter Email Address"
             name="email"
           />
           <textarea
             className={styles.textarea}
-            placeholder="Enter Your Message"
+            placeholder="Enter Message"
             name="message"
           />
           <div className={styles.wrap}>

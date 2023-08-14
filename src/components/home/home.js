@@ -19,7 +19,7 @@ const Home = () => {
           </h1>
           <Link
             className={styles.button}
-            to="works"
+            to="Projects"
             smooth
             duration={500}
             offset={-75}
